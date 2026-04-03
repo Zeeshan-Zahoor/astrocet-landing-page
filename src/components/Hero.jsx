@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import StarBackground from "./StarBackground";
+import scrollToElement from "../utils/smoothScroll";
 
 function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -15,7 +16,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
       {/* animate Background */}
       <StarBackground />
@@ -86,7 +87,7 @@ function Hero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+          onClick={() => scrollToElement('about', 70)}
         >
           <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
             <div className="w-1 h-2 bg-gray-400 rounded-full mt-2 animate-bounce" />
