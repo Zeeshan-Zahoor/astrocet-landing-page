@@ -37,9 +37,11 @@ function Navbar() {
               <button
                 key={link}
                 onClick={() => smoothScroll(link.toLowerCase())}
-                className="text-gray-300 hover:text-white transition-colors duration-200"
+                className="relative group px-2 py-1 text-gray-300 transition-all duration-300 hover:text-white hover:scale-110"
               >
                 {link}
+                {/* animated underline */}
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-linear-to-r from-purple-400 to-cyan-400 transition-all duration-300 group-hover:w-full group-hover:left-0 group-hover:shadow-lg group-hover:shadow-purple-500/50" />
               </button>
             ))}
           </div>
@@ -64,9 +66,10 @@ function Navbar() {
               <button
                 key={link}
                 onClick={() => smoothScroll(link.toLowerCase())}
-                className="block py-2 text-gray-300 hover:text-white w-full text-left"
+                className="relative group block w-full py-3 px-4 text-left text-gray-300 transition-all duration-300 hover:text-white hover:pl-6"
               >
                 {link}
+                <span className="absolute left-0 top-1/2 w-0 h-0.5 bg-linear-to-r from-purple-400 to-cyan-400 transition-all duration-300 group-hover:w-4 -translate-y-1/2" />
               </button>
             ))}
           </motion.div>
