@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+import StarBackground from "./StarBackground";
 
 function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -17,43 +18,7 @@ function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
       {/* animate Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 via-[#0A0A1A] to-cyan-900/20" />
-
-        {[...Array(50)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute bg-white rounded-full"
-            style={{
-              width: Math.random() * 3 + 1 + 'px',
-              height: Math.random() * 3 + 1 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-          />
-        ))}
-
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-purple-600 rounded-full blur-[100px] opacity-20"
-          animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-
-        <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-600 rounded-full blur-[100px] opacity-20"
-          animate={{ x: [0, -80, 0], y: [0, -40, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        />
-      </div>
+      <StarBackground />
 
       {/* Hero content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">

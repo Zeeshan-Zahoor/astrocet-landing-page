@@ -13,7 +13,7 @@ function Navbar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className='fixed top-0 left-0 w-full z-50 bg-[#0A0A1A]/80 backdrop-blur-md border-b border-white/10'>
+      className='fixed top-0 left-0 w-full z-50 bg-[#050513]/80 backdrop-blur-md border-b border-white/10'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           <motion.div
