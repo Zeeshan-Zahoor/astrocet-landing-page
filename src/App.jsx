@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Events from './components/Events';
+import AstroFeature from './components/AstroFeature';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <About />
       <Events />
+      <AstroFeature />
     </div>
   )
 }
