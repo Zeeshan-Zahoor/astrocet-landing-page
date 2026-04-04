@@ -18,17 +18,17 @@ function About() {
     {
       icon: Cpu,
       title: 'Rover Focus',
-      description: 'Specialized in building advanced rovers with rocker-bogie suspension',
+      description: "Builds advanced rovers with rocker-bogie suspension for superior terrain adaptability, stability, and reliable performance in demanding environments.",
     },
     {
       icon: Target,
       title: 'Our Mission',
-      description: 'Push technical boundaries and inspire space exploration',
+      description: "The club's primary mission is to ignite a passion for astronomy among students and the general public, providing a platform for learning, exploration, and innovation.",
     },
     {
       icon: Eye,
       title: 'Our Vision',
-      description: 'Become India\'s premier student space robotics team',
+      description: "AstroCET aims to lead in astronomy education and outreach, inspiring students and the public to explore the cosmos. By fostering skill development, collaborating with institutions, and promoting innovation, the club seeks to create an inclusive environment, expand its reach, and contribute to scientific knowledge.",
     },
   ];
 
