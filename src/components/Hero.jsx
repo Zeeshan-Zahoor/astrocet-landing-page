@@ -98,8 +98,8 @@ function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          onClick={() => scrollToElement('about', 70)}
+          className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          onClick={scrollToAbout}
         >
           <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
             <div className="w-1 h-2 bg-gray-400 rounded-full mt-2 animate-bounce" />
