@@ -1,6 +1,6 @@
 import { ReactLenis } from 'lenis/react';
 
-function SmoothScroll({ children }) {
+export default function SmoothScroll({ children }) {
    return (
     <ReactLenis
       root
@@ -15,5 +15,3 @@ function SmoothScroll({ children }) {
     </ReactLenis>
   ); 
 }
-
-export default SmoothScroll;
