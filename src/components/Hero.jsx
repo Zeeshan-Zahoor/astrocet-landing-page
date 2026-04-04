@@ -2,11 +2,23 @@ import { useState, useEffect } from "react";
 import { ArrowRight, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import StarBackground from "./StarBackground";
-import scrollToElement from "../utils/smoothScroll";
+import { useLenis } from "lenis/react";
 
 function Hero() {
+  const lenis = useLenis();
+
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = ["Rover Team", "Space Explorers", "AstroCET"];
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection && lenis) {
+      lenis.scrollTo(aboutSection, {
+        offset: -70,
+        duration: 1.2,
+      });
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -2,18 +2,30 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import scrollToElement from '../utils/smoothScroll';
+import { useLenis } from 'lenis/react';
 
 function Navbar() {
+  const lenis = useLenis();
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = ["About", "Events", "Feature", "Team"];
 
   const smoothScroll = (sectionId) => {
-    scrollToElement(sectionId, 70);
-
-    // close mobile menu
-    setIsOpen(false);
+  const element = document.getElementById(sectionId);
+  if (element) {
+    if (lenis) {
+      // Use Lenis (smoother)
+      lenis.scrollTo(element, {
+        offset: -70,
+        duration: 1.2,
+      });
+    } else {
+      // Fallback for any Lenis loading issues
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
+  setIsOpen(false);
+};
 
   return (
     <motion.nav
