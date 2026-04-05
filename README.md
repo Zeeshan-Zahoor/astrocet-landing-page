@@ -6,7 +6,7 @@ A modern, animated landing page for **AstroCET** — the space robotics communit
 
 ## 🌐 Live Demo
 
-👉 https://astrocetlanding.netlify.app/
+👉 https://astrocet-landing-page.vercel.app
 
 ---
 
